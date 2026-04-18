@@ -3,8 +3,7 @@
 import React, { useState } from 'react';
 
 export default function Home() {
-  const [expoUrl, setExpoUrl] = useState("exp://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?channel-name=main");
-  
+  const expoUrl = "exp://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?channel-name=main";
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(expoUrl)}`;
 
   return (
@@ -29,34 +28,27 @@ export default function Home() {
         {/* Hero Section */}
         <section className="px-4 sm:px-8 pt-12 sm:pt-20 pb-12 text-center max-w-4xl mx-auto">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#2F8A77]/10 text-[#2F8A77] text-[10px] sm:text-xs font-bold tracking-wider uppercase">
-            Live Development Preview
+            Official Internal Release
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 sm:mb-8 tracking-tight px-2 text-balance">
-            Real-time <span className="text-[#2F8A77]">App Testing</span> for Developers.
+            The <span className="text-[#2F8A77]">TravelAventures</span> Experience.
           </h1>
           <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4">
-            Test the latest TravelAventures features instantly. No build required—just scan the dynamic QR code generated from your local environment.
+            Welcome to the official testing portal. Scan the permanent QR code below to launch the latest build directly on your device via Expo Go.
           </p>
         </section>
 
-        {/* Dynamic Scan Section */}
+        {/* Static Scan Section */}
         <section id="scan" className="px-4 sm:px-8 py-12 sm:py-16 bg-white border-y border-gray-100">
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             <div className="order-2 lg:order-1 px-2">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center lg:text-left">Dynamic App Configuration</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center lg:text-left">Official Testing Channel</h2>
               
-              <div className="bg-gray-50 p-6 rounded-2xl mb-8 border border-gray-100">
-                <label className="block text-xs font-bold text-[#2F8A77] uppercase tracking-widest mb-2">Expo URL (Tunnel or Publish)</label>
-                <input 
-                  type="text" 
-                  value={expoUrl}
-                  onChange={(e) => setExpoUrl(e.target.value)}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2F8A77] focus:border-transparent outline-none transition-all shadow-sm"
-                  placeholder="exp://abc123.exp.direct"
-                />
-                <p className="mt-3 text-[10px] text-gray-400 italic font-medium">
-                  Tip: Use `npx expo start --tunnel` to get a public URL from your local machine.
+              <div className="bg-[#2F8A77]/5 p-6 rounded-2xl mb-8 border border-[#2F8A77]/10">
+                <p className="text-[#2F8A77] text-sm font-semibold mb-2">Build Channel: <span className="text-black ml-2 font-mono">main</span></p>
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  This portal is connected to the official TravelAventures internal update stream. New features will appear automatically every time you launch the app.
                 </p>
               </div>
 
