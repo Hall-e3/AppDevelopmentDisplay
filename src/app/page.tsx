@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 export default function Home() {
-  const [expoUrl, setExpoUrl] = useState("exp://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?runtime-version=1.0.0&channel-name=production");
+  const [expoUrl, setExpoUrl] = useState("exp://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?channel-name=main");
   
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(expoUrl)}`;
 
@@ -12,10 +12,8 @@ export default function Home() {
       {/* Header */}
       <nav className="flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6 bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100/50">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#2F8A77] rounded-lg flex items-center justify-center shrink-0">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-1.2-.3-2.4.3-3 1.3-.6 1-1.3 3.3 1.2 4.5l8 2 2 8c1.2 2.5 3.5 1.8 4.5 1.2 1-.6 1.6-1.8 1.3-3z"/>
-            </svg>
+          <div className="w-8 h-8 bg-[#2F8A77] rounded-lg flex items-center justify-center shrink-0 overflow-hidden">
+            <img src="/favicon.png" alt="TravelAventures" className="w-full h-full object-contain scale-75" />
           </div>
           <span className="text-lg sm:text-xl font-bold tracking-tight text-[#2F8A77] whitespace-nowrap">TravelAventures</span>
         </div>
