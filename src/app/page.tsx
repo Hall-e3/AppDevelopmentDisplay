@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 
 export default function Home() {
-  const expoUrl = "exp+travelaventures://expo-development-client/?url=https://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?runtime-version=1.0.0&channel-name=main";
-  const qrUrl = "https://qr.expo.dev/eas-update?projectId=950b6618-5903-43a8-bc43-3a0400ce9962&runtimeVersion=1.0.0&channel=main";
+  const expoUrl = "https://expo.dev/accounts/hall-e3/projects/TravelAventures/builds/26b2048b-2afe-4ef6-8180-b374b85dc43b";
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(expoUrl)}`;
 
   return (
     <div className="min-h-screen bg-[#F0F7F5] font-sans text-[#000000] overflow-x-hidden">
@@ -31,10 +31,10 @@ export default function Home() {
             Official Internal Release
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 sm:mb-8 tracking-tight px-2 text-balance">
-            The <span className="text-[#2F8A77]">TravelAventures</span> Experience.
+            The <span className="text-[#2F8A77]">TravelAventures</span> Preview.
           </h1>
           <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4">
-            Welcome to the official testing portal. Scan the permanent QR code below to launch the latest build directly on your device via Expo Go.
+            Welcome to the official testing portal. Scan the QR code below to install the latest **Android Preview Build** directly on your device.
           </p>
         </section>
 
@@ -43,12 +43,12 @@ export default function Home() {
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             <div className="order-2 lg:order-1 px-2">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center lg:text-left">Official Testing Channel</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center lg:text-left">Android Preview Release</h2>
               
               <div className="bg-[#2F8A77]/5 p-6 rounded-2xl mb-8 border border-[#2F8A77]/10">
-                <p className="text-[#2F8A77] text-sm font-semibold mb-2">Build Channel: <span className="text-black ml-2 font-mono">main</span></p>
+                <p className="text-[#2F8A77] text-sm font-semibold mb-2">Build Type: <span className="text-black ml-2 font-mono text-xs">Internal Preview (APK)</span></p>
                 <p className="text-gray-500 text-xs leading-relaxed">
-                  This portal is connected to the official TravelAventures internal update stream. New features will appear automatically every time you launch the app.
+                  Scanning this code will take you to the official Expo build page. Tap the "Install" button on that page to download the TravelAventures app to your Android device.
                 </p>
               </div>
 
