@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 
 export default function Home() {
-  const expoUrl = "exp://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?channel-name=main";
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(expoUrl)}`;
+  const expoUrl = "exp+travelaventures://expo-development-client/?url=https://u.expo.dev/950b6618-5903-43a8-bc43-3a0400ce9962?runtime-version=1.0.0&channel-name=main";
+  const qrUrl = "https://qr.expo.dev/eas-update?projectId=950b6618-5903-43a8-bc43-3a0400ce9962&runtimeVersion=1.0.0&channel=main";
 
   return (
     <div className="min-h-screen bg-[#F0F7F5] font-sans text-[#000000] overflow-x-hidden">
